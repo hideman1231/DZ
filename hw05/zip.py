@@ -1,18 +1,13 @@
 # Разбираемся, что делает функция zip, и пробуем написать свой собственный zip 
-z = []
-a = ['Denis', 'Doc', 'Kirill','Dima'] 
-b = [12, 17] 
+def prototype_zip(a,b):
+	z = []
+	while len(a) > len(b): 
+		del a[-1] 
+	for i in range(len(a)): 
+		z.append((a[i],b[i])) 
+	return(z)
 
-while len(a) > len(b): 
-	del a[-1] 
-
-for i in range(len(a)): 
-	z.append((a[i],b[i])) 
-
-print(z)
-
-# print(list(zip(a,b)))
-
+print(prototype_zip(['Denis', 'Doc', 'Kirill','Dima'],[12, 17]))
 
 
 
